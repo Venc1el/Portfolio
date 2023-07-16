@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');
 @font-face {
 	font-family: 'Pixel-Font';
-	src: url('/Portfolio/font/pixel.ttf');
+	src: url('/font/pixel.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'Pixeboy';
