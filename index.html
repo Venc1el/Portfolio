@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body>
+  <main>
+    <audio id="clickSound">
+      <source src="sound/pikachu.mp3" type="audio/mpeg">
+    </audio>    
+    <div class="message">To see the menu, please view on a larger screen.</div>
+
+    <div id="home" class="content content--switch">
+      <img id="background-home" src="img/pixel-art.gif" alt="background">
+      <div class="home">
+        <span id="text" class="first-text content_title"></span>
+        <span id="cursor">|</span>
+      </div>
+      
+
+      <div class="content--fixed">
+        <button class="hidden menu-trigger"><img src="img/duck-pixel.gif" alt="duck"></button>
+        <button onclick="playSound()"><img class="pokemon" src="img/pokemon.gif" alt=""></button>
+      </div>
+    </div>
+
+    <div id="about" class="relative h-screen w-full flex flex-col justify-center items-center py-12">
+      <div class="about relative z-50 w-10/12 h-4/6 lg:h-3/6 md:h-6/12 sm:w-4/6 rounded-2xl border-t border-l border-r border-gray-600">
+        <div class="absolute md:top-12 md:right-5 md:bottom-auto top-5 px-8 md:text-start md:w-7/12 text-center ">
+          <h4 class="z-50 uppercase font-semibold md:text-xl text-xl mb-4 bg-gray-900 px-5 py-1 rounded-md">
+            <span style="color: #50adff;">I'm</span> Sudarmo adi 
+          </h4>
+          <p class="text-justify text-sm">
+            I'm a web developer specializing in creating awesome websites with great UI/UX. From sleek designs to seamless functionality, 
+            I deliver captivating online experiences that leave a lasting impression. Let's collaborate and take your online presence to the 
+            next level.
+          </p>
+          <div class="flex justify-center items-center mt-4 bg-black rounded-full pt-2.5 pb-1.5 px-5 w-fit h-fit">
+            <a class="mr-5" href="#">
+              <i class="fa-brands fa-facebook fa-md text-white"></i>
+            </a>
+            <a class="mr-5" href="#">
+              <i class="fa-brands fa-instagram fa-md text-white"></i>
+            </a>
+
+            <a href="#" >
+              <i class="fa-brands fa-github fa-md text-white"></i>
+            </a>          
+          </div>
+        </div>
+        <img class="sm:h-40 md:h-48 lg:h-56 h-32 absolute lg:left-16 md:bottom-0 md:left-5 md:translate-x-0 bottom-0 left-1/2 -translate-x-1/2" src="img/pixelbot-robot.gif" alt="avatar">
+      </div>
+      
+      <img id="background-about" class="top-0" style="z-index: -1;" src="img/mario-pixel-art.gif" alt="">
+    </div>
+      
+  
+    <div id="experience" class="relative w-full h-screen flex flex-col justify-center items-center">
+      <div class="flex justify-between items-center bg-gray-300 px-6 py-3 w-5/6">
+        <h2 class=" md:text-4xl text-2xl text-start text-black font-semibold">Experience</h2>
+        <div class="flex gap-3">
+          <div class="w-6 h-6 bg-yellow-500 rounded-full"></div>
+          <div class="w-6 h-6 bg-green-500 rounded-full"></div>
+          <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
+
+        </div>
+      </div>
+      <div class="skills md:py-12 py-5 px-5 w-5/6 flex justify-evenly flex-wrap gap-8">
+        <div class="w-full md:flex flex-wrap lg:w-1/3 text-justify">
+          <span class="text-amber-400 text-sm">2020</span>
+          <div>
+            <h1>UI / UX Designer</h3>
+            <p class="text-xs md:text-sm text-slate-200">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, nisi corrupti illum esse doloremque nulla eligendi, ipsum eum fugit sed atque. 
+            </p>
+          </div>
+        </div>
+        <div class="w-full md:flex flex-wrap lg:w-1/3 text-justify">
+          <span class="text-amber-400 text-sm">2021</span>
+          <div>
+            <h1>Web Developer</h1>
+            <p class="text-xs md:text-sm text-slate-200">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, nisi corrupti illum esse doloremque nulla eligendi, ipsum eum fugit sed atque. 
+            </p>
+          </div>
+        </div>
+        <div class="w-full md:flex flex-wrap lg:w-1/3 text-justify">
+          <span class="text-amber-400 text-sm">2022</span>
+          <div>
+            <h1>Frontend Developer</h1>
+            <p class="text-xs md:text-sm text-slate-200">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, nisi corrupti illum esse doloremque nulla eligendi, ipsum eum fugit sed atque. 
+            </p>
+          </div>
+        </div>
+        <div class="w-full md:flex flex-wrap lg:w-1/3 text-justify">
+          <span class="text-amber-400 text-sm">2023</span>
+          <div>
+            <h1>Fullstack Developer</h1>
+            <p class="text-xs md:text-sm text-slate-200">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, nisi corrupti illum esse doloremque nulla eligendi, ipsum eum fugit sed atque. 
+            </p>
+
+          </div>
+        </div>
+      </div>
+      
+      <img id="background-experience" class="top-0" style="z-index: -1;" src="img/anime-aesthetic.gif" alt="">
+    </div>
+
+    <div id="skills" class="relative flex justify-center w-full h-screen">
+        <div class="my-12 w-5/6 md:w-3/6 h-4/6 md:flex flex-col">
+          <h2 class="relative inline-block text-4xl font-semibold uppercase mb-10">
+            Ski<span class="text-cyan-600">l</span>ls
+            <span class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-yellow-500"></span>
+        </h2>
+          <ul class="grid grid-cols-1 gap-4">
+            <li>
+              <span class="font-semibold">HTML</span>
+              <div class="relative pt-1">
+                <div class="flex mb-2 items-center justify-between">
+                  <div>
+                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-teal-600 bg-teal-200">
+                      Intermediate
+                    </span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-xs font-semibold inline-block text-teal-400">
+                      90%
+                    </span>
+                  </div>
+                </div>
+                <div class="overflow-hidden h-4 mb-4 text-xs flex rounded bg-teal-200">
+                  <div style="width: 90%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-teal-500"></div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="font-semibold">CSS</span>
+              <div class="relative pt-1">
+                <div class="flex mb-2 items-center justify-between">
+                  <div>
+                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200">
+                      Advanced
+                    </span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-xs font-semibold inline-block text-blue-400">
+                      80%
+                    </span>
+                  </div>
+                </div>
+                <div class="overflow-hidden h-4 mb-4 text-xs flex rounded bg-blue-200">
+                  <div style="width: 80%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="font-semibold">JavaScript</span>
+              <div class="relative pt-1">
+                <div class="flex mb-2 items-center justify-between">
+                  <div>
+                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-yellow-600 bg-yellow-200">
+                      Intermediate
+                    </span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-xs font-semibold inline-block text-yellow-400">
+                      60%
+                    </span>
+                  </div>
+                </div>
+                <div class="overflow-hidden h-4 mb-4 text-xs flex rounded bg-yellow-200">
+                  <div style="width: 60%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-yellow-500"></div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="font-semibold">PHP</span>
+              <div class="relative pt-1">
+                <div class="flex mb-2 items-center justify-between">
+                  <div>
+                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-red-600 bg-red-200">
+                      Beginner
+                    </span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-xs font-semibold inline-block text-red-400">
+                      50%
+                    </span>
+                  </div>
+                </div>
+                <div class="overflow-hidden h-4 mb-4 text-xs flex rounded bg-red-200">
+                  <div style="width: 50%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <img id="background-skills" style="top:0; z-index: -1; opacity: 50%;" src="img/3651aa6dfe3751ea99c2c52329313d5b.png" alt="">
+    </div>
+
+    <div id="project" class="relative flex justify-center flex-col w-full h-full md:h-screen py-5">
+      <h1 class="text-3xl text-center text-white mb-6 uppercase font-bold">
+        Project <span class="text-amber-500">Showcase</span>
+      </h1>
+    
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-5">
+        <!-- Project 1 -->
+        <div class="bg-black bg-opacity-70 rounded-lg shadow-lg p-4">
+          <div class="pixelated">
+            <img src="img/MultiboxMenuDemo.jpg" alt="Project 1" class="w-full h-48 object-cover rounded pixelated-img">
+          </div>
+          <h2 class="text-xl font-bold mt-2">Multibox Menu</h2>
+          <p class="text-gray-400">A simple grid-powered multibox menu where the boxes get shown with a reveal animation coming from different directions.</p>
+          <a href="https://tympanus.net/Development/MultiboxMenu/" target="_blank" class="block mt-4 text-red-500 hover:underline">View Details</a>
+        </div>
+    
+        <!-- Project 2 -->
+        <div class="bg-black bg-opacity-70 rounded-lg shadow-lg p-4">
+          <div class="pixelated">
+            <img src="img/cliphoverslices_featuredDemo.gif" alt="Project 2" class="w-full h-48 object-cover rounded pixelated-img">
+          </div>
+          <h2 class="text-xl font-bold mt-2">Coding the Sliced Image Hover Effect from Quai Network</h2>
+          <p class="text-gray-400">Learn how to code a similar hover animation to the one seen on the website of Quai Network. </p>
+          <a href="http://tympanus.net/Tutorials/ClipHoverEffect/" target="_blank" class="block mt-4 text-blue-500 hover:underline pixelated-btn">View Details</a>
+        </div>
+    
+        <!-- Project 3 -->
+        <div class="bg-black bg-opacity-70 rounded-lg shadow-lg p-4">
+          <div class="pixelated">
+            <img src="img/gradientmaskDemo.jpg" alt="Project 3" class="w-full h-48 object-cover rounded pixelated-img">
+          </div>
+          <h2 class="text-xl font-bold mt-2">Recreating the Gradient Mask Hover Effect from Evervault</h2>
+          <p class="text-gray-400">A recreation of the hover effect seen on the customer grid on the Evervault website. </p>
+          <a href="http://tympanus.net/Tutorials/AnimatedCodeBackground/" target="_blank" class="block mt-4 text-violet-500 hover:underline pixelated-btn">View Details</a>
+        </div>
+      </div>
+      <img id="background-project" class="top-0" style="z-index: -1;" src="img/medi.png" alt="">
+    </div>
+
+    
+    <div id="contact" class="w-full h-screen flex flex-col sm:flex-row justify-center items-center shadow-md bg-gray-100">
+      <div class="relative w-full md:max-w-lg mx-10 py-12 px-24">
+        <h2 class="relative inline-block text-2xl font-bold mb-4 text-black uppercase">
+          Get in Touch
+          <span class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-purple-500"></span>
+        </h2>
+        <p class="text-gray-600 mb-6">Feel free to reach out to us if you have any questions or inquiries.</p>
+        <div class="flex items-center mb-4">
+          <div class="mr-4"><i class="fas fa-envelope text-blue-500 text-2xl"></i></div>
+          <div>
+            <p class="text-gray-600">Email:</p>
+            <p class="font-semibold text-gray-600">contact@example.com</p>
+          </div>
+        </div>
+        <div class="flex items-center mb-4">
+          <div class="mr-4"><i class="fas fa-phone text-blue-500 text-2xl"></i></div>
+          <div>
+            <p class="text-gray-600">Phone:</p>
+            <p class="font-semibold text-gray-600">+1 (555) 123-4567</p>
+          </div>
+        </div>
+        <div class="flex items-center mb-4">
+          <div class="mr-4"><i class="fas fa-map-marker-alt text-blue-500 text-2xl"></i></div>
+          <div>
+            <p class="text-gray-600">Address:</p>
+            <p class="font-semibold text-gray-600">123 Main Street, City, Country</p>
+          </div>
+        </div>
+        <div class="absolute top-0 left-0 w-10 h-10 bg-red-600"></div>
+        <div class="absolute top-0 right-0 w-10 h-10 bg-yellow-500"></div>
+        <div class="absolute bottom-0 left-0 w-10 h-10 bg-green-500"></div>
+        <div class="absolute bottom-0 right-0 w-10 h-10 bg-cyan-500"></div>
+      </div>
+    </div>
+    
+    
+    
+
+    <nav class="grim uppercase font-semibold">
+      <div class="grim__item">
+        <div class="grim__item-bg grim__item-bg--1"></div>
+      </div>
+      <div class="grim__item">
+        <div class="grim__item-bg grim__item-bg--2"></div>
+      </div>
+      <div class="grim__item">
+        <div class="grim__item-bg grim__item-bg--3"></div>
+        <div class="grim__item-content">
+          <div class="grim__item-inner">
+            <button class="menu-trigger menu-trigger--close text-sm">- close</button>
+          </div>
+        </div>
+      </div>
+      <div class="grim__item">
+        <div class="grim__item-bg grim__item-bg--4"></div>
+      </div>
+      <div class="grim__item">
+        <div class="grim__item-bg grim__item-bg--5"></div>
+        <a href="#home" class="grim__link grim__item-content">
+          <div class="grim__item-inner">
+            <h3 class="m-0 text-2xl">home</h3>
+          </div>
+        </a>
+      </div>
+      <div class="grim__item">
+        <div class="grim__item-bg grim__item-bg--6"></div>
+        <a href="#experience" class="grim__link grim__item-content">
+          <div class="grim__item-inner">
+            <h3 class="m-0 text-base">Experience</h3>
+          </div>
+        </a>
+      </div>
+      <div class="grim__item">
+        <div class="grim__item-bg grim__item-bg--7"></div>
+        <a href="#skills" class="grim__link grim__item-content">
+          <div class="grim__item-inner">
+            <h3 class="m-0 text-3xl">Skills</h3>
+          </div>
+        </a>
+      </div>
+      <div class="grim__item">
+        <div class="grim__item-bg grim__item-bg--8"></div>
+        <a href="#contact" class="grim__link grim__item-content">
+          <div class="grim__item-inner">
+            <h3 class="m-0 text-4xl">Contact</h3>
+          </div>
+        </a>
+      </div>
+      <div class="grim__item">
+        <div class="grim__item-bg grim__item-bg--9"></div>
+        <a href="#project" class="grim__link grim__item-content">
+          <div class="grim__item-inner">
+            <h3 class="m-0 text-5xl">Projects</h3>
+          </div>
+        </a>
+      </div>
+      <div class="grim__item">
+        <div class="grim__item-bg grim__item-bg--10" data-duration="1000" data-easing="easeOutQuint"></div>
+        <a href="#about" class="grim__link grim__item-content">
+          <div class="grim__item-inner">
+            <h3 class="m-0 text-6xl">About Me</h3>
+          </div>
+        </a>
+      </div>
+    </nav>
+  
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://kit.fontawesome.com/43133f443d.js" crossorigin="anonymous"></script>
+  <script src="javascript/main.js"></script>
+</div>
+</html>
