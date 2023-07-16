@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @font-face {
 	font-family: 'Pixel-Font';
 	src: url('/font/pixel.ttf') format("truetype");
@@ -164,7 +165,7 @@ main {
 
 
 .content_title, #cursor {
-	font-family: 'Pixel-Font';
+	font-family: 'VT323';
 	font-size: 1.3rem;
 	margin: 0;
 }
