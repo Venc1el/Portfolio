@@ -164,13 +164,15 @@ main {
 }
 
 
-.content_title, #cursor {
+.content_title {
 	font-family: 'Press Start 2P';
-	font-size: 1.3rem;
+	font-size: 1rem;
 	margin: 0;
-}
+}                    
 
-#cursor{
+#cursor{font-family: 'Press Start 2P';
+	font-size: 1rem;
+	margin: 0;
 	color: #f8d15b;
 }
 
